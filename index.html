@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#4a3324" />
+    <meta
+      name="format-detection"
+      content="telephone=no, date=no, address=no, email=no"
+    />
+    <meta
+      name="description"
+      content="Ada quest kecil yang aku siapin buat kamu. Mainin pelan-pelan sampai tamat, ya sayang."
+    />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>Selamat Ulang Tahun, Yaya!</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Selamat Ulang Tahun, Yaya!" />
+    <meta
+      property="og:description"
+      content="Ada quest kecil yang aku siapin buat kamu. Mainin pelan-pelan sampai tamat, ya sayang."
+    />
+    <meta property="og:image" content="./og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Selamat Ulang Tahun, Yaya!" />
+    <meta
+      name="twitter:description"
+      content="Ada quest kecil yang aku siapin buat kamu. Mainin pelan-pelan sampai tamat, ya sayang."
+    />
+    <meta name="twitter:image" content="./og-image.jpg" />
+    <meta name="robots" content="noindex" />
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #6c4b33;
+      }
+      .boot-splash {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        box-sizing: border-box;
+        text-align: center;
+        color: rgba(251, 243, 228, 0.74);
+        font: 400 15px/1.3 "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        background: radial-gradient(120% 85% at 50% 46%, rgba(24, 15, 9, 0.2) 0, rgba(24, 15, 9, 0.58) 70%, rgba(18, 11, 6, 0.8) 100%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Cpath fill='%2397704e' d='M0 0h1v1h-1zM5 0h1v1h-1zM15 0h1v1h-1zM9 1h1v1h-1zM11 1h1v1h-1zM15 1h1v1h-1zM3 2h1v1h-1zM7 2h1v1h-1zM11 2h1v1h-1zM0 3h1v1h-1zM7 3h1v1h-1zM12 3h1v1h-1zM3 4h1v1h-1zM9 4h1v1h-1zM12 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM9 5h1v1h-1zM3 6h1v1h-1zM1 7h1v1h-1zM15 7h1v1h-1zM0 8h1v1h-1zM14 8h1v1h-1zM9 9h1v1h-1zM11 9h1v1h-1zM6 10h1v1h-1zM10 10h1v1h-1zM13 10h1v1h-1zM2 11h1v1h-1zM4 11h1v1h-1zM10 11h1v1h-1zM2 12h2v1h-2zM11 12h1v1h-1zM5 13h1v1h-1zM11 13h1v1h-1zM5 14h1v1h-1zM7 14h1v1h-1zM11 14h2v1h-2zM1 15h1v1h-1zM3 15h1v1h-1zM6 15h1v1h-1zM12 15h1v1h-1z'/%3E%3Cpath fill='%236c4b33' d='M1 0h1v1h-1zM4 0h1v1h-1zM10 0h1v1h-1zM2 1h1v1h-1zM10 1h1v1h-1zM0 2h2v1h-2zM6 2h1v1h-1zM13 2h1v1h-1zM1 3h1v1h-1zM8 3h1v1h-1zM0 4h3v1h-3zM6 4h2v1h-2zM11 4h1v1h-1zM3 5h2v1h-2zM8 5h1v1h-1zM12 5h1v1h-1zM10 6h1v1h-1zM13 6h1v1h-1zM2 7h1v1h-1zM7 7h1v1h-1zM9 7h1v1h-1zM3 8h1v1h-1zM11 8h1v1h-1zM13 8h1v1h-1zM0 9h1v1h-1zM2 9h3v1h-3zM12 9h2v1h-2zM15 10h1v1h-1zM1 11h1v1h-1zM11 11h1v1h-1zM13 11h1v1h-1zM15 11h1v1h-1zM0 12h2v1h-2zM6 12h2v1h-2zM12 12h1v1h-1zM2 13h1v1h-1zM4 13h1v1h-1zM7 13h1v1h-1zM9 13h1v1h-1zM2 14h1v1h-1zM0 15h1v1h-1zM7 15h2v1h-2zM10 15h1v1h-1zM13 15h1v1h-1zM15 15h1v1h-1z'/%3E%3Cpath fill='%23866043' d='M2 0h2v1h-2zM7 0h2v1h-2zM11 0h4v1h-4zM0 1h2v1h-2zM4 1h2v1h-2zM8 1h1v1h-1zM13 1h1v1h-1zM4 2h2v1h-2zM8 2h1v1h-1zM15 2h1v1h-1zM3 3h2v1h-2zM6 3h1v1h-1zM9 3h2v1h-2zM13 3h3v1h-3zM5 4h1v1h-1zM8 4h1v1h-1zM10 4h1v1h-1zM13 4h2v1h-2zM1 5h2v1h-2zM5 5h1v1h-1zM7 5h1v1h-1zM10 5h1v1h-1zM13 5h1v1h-1zM15 5h1v1h-1zM0 6h1v1h-1zM2 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM11 6h2v1h-2zM14 6h2v1h-2zM3 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1zM12 7h1v1h-1zM1 8h2v1h-2zM4 8h2v1h-2zM7 8h2v1h-2zM10 8h1v1h-1zM12 8h1v1h-1zM15 8h1v1h-1zM5 9h1v1h-1zM8 9h1v1h-1zM10 9h1v1h-1zM14 9h2v1h-2zM0 10h1v1h-1zM2 10h2v1h-2zM5 10h1v1h-1zM7 10h3v1h-3zM12 10h1v1h-1zM14 10h1v1h-1zM0 11h1v1h-1zM3 11h1v1h-1zM6 11h4v1h-4zM12 11h1v1h-1zM14 11h1v1h-1zM4 12h2v1h-2zM8 12h3v1h-3zM13 12h3v1h-3zM0 13h2v1h-2zM3 13h1v1h-1zM6 13h1v1h-1zM8 13h1v1h-1zM13 13h2v1h-2zM0 14h2v1h-2zM4 14h1v1h-1zM6 14h1v1h-1zM8 14h3v1h-3zM14 14h2v1h-2zM5 15h1v1h-1zM9 15h1v1h-1zM11 15h1v1h-1zM14 15h1v1h-1z'/%3E%3Cpath fill='%23593d29' d='M6 0h1v1h-1zM9 0h1v1h-1zM3 1h1v1h-1zM6 1h2v1h-2zM14 1h1v1h-1zM2 2h1v1h-1zM9 2h1v1h-1zM14 2h1v1h-1zM2 3h1v1h-1zM5 3h1v1h-1zM11 3h1v1h-1zM4 4h1v1h-1zM15 4h1v1h-1zM11 5h1v1h-1zM1 6h1v1h-1zM7 6h1v1h-1zM9 6h1v1h-1zM0 7h1v1h-1zM4 7h1v1h-1zM13 7h2v1h-2zM6 8h1v1h-1zM9 8h1v1h-1zM1 9h1v1h-1zM6 9h2v1h-2zM4 10h1v1h-1zM11 10h1v1h-1zM5 11h1v1h-1zM10 13h1v1h-1zM12 13h1v1h-1zM3 14h1v1h-1zM13 14h1v1h-1zM2 15h1v1h-1zM4 15h1v1h-1z'/%3E%3Cpath fill='%23b9855c' d='M12 1h1v1h-1zM10 2h1v1h-1zM12 2h1v1h-1zM14 5h1v1h-1zM4 6h2v1h-2zM5 7h2v1h-2zM11 7h1v1h-1zM1 10h1v1h-1zM15 13h1v1h-1z'/%3E%3C/svg%3E") 0 0/64px 64px repeat, #6c4b33;
+      }
+      .boot-stack {
+        display: grid;
+        grid-template-rows: 20px 44px 26px 30px 20px 44px;
+        justify-items: center;
+        align-items: center;
+        width: min(460px, 100%);
+      }
+      .boot-splash p {
+        grid-row: 3;
+        margin: 0;
+      }
+      .boot-bar {
+        grid-row: 4;
+        align-self: end;
+        position: relative;
+        width: min(200px, 54vw);
+        height: 2px;
+        overflow: hidden;
+        border-radius: 2px;
+        background: rgba(251, 243, 228, 0.18);
+      }
+      .boot-bar::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        width: 30%;
+        border-radius: 2px;
+        background: linear-gradient(90deg, #f3d9a4, #e1b54a);
+        animation: boot-slide 1.4s ease-in-out infinite;
+      }
+      .boot-splash button {
+        grid-row: 4 / span 3;
+        font: 500 15px/1 "DM Sans", ui-sans-serif, system-ui, sans-serif;
+        padding: 12px 22px;
+        border: 0;
+        border-radius: 2px;
+        background: #fbf3e4;
+        color: #3b2a1e;
+        cursor: pointer;
+      }
+      @keyframes boot-slide {
+        from {
+          transform: translateX(-110%);
+        }
+        to {
+          transform: translateX(360%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .boot-bar::after {
+          animation: none;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-DmVWTH9b.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/react-D-vXKkXw.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-BBq7hkAk.css">
+  </head>
+  <body>
+    <div id="root">
+      <div class="boot-splash" role="status">
+        <div class="boot-stack">
+          <p>Menyiapkan kadomu…</p>
+          <span class="boot-bar" aria-hidden="true"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

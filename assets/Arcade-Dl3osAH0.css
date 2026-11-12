@@ -1,0 +1,1388 @@
+.activity-overlay.arcade {
+    padding: 18px 24px
+}
+
+.activity-overlay.arcade .activity-shell {
+    max-width: 1080px;
+    padding: 8px 20px 4px;
+    border: 18px solid transparent;
+    border-image: var(--px-cabinet) 3/18px stretch;
+    background: linear-gradient(180deg, #6b4a29 0 3%, #5a3d22 3% 60%, #4d331c 60%) padding-box;
+    filter: drop-shadow(0 12px 0 rgba(0, 0, 0, .35))
+}
+
+.activity-overlay.arcade .activity-shell:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    width: 84px;
+    height: 10px;
+    translate: -50% 0;
+    background: #24190f;
+    box-shadow: 0 0 0 3px var(--ink), inset 0 3px #000;
+    pointer-events: none
+}
+
+.tetris-app {
+    position: relative
+}
+
+.tetris-app :focus-visible {
+    outline-color: var(--gold)
+}
+
+.tetris-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 18px;
+    padding: 4px 2px 0
+}
+
+.tetris-head .activity-kicker {
+    order: 1;
+    flex-basis: 100%;
+    margin: 0
+}
+
+.activity-overlay.arcade .tetris-head h1 {
+    order: 2;
+    margin: 4px 0 2px;
+    font-size: 28px;
+    text-shadow: 3px 3px 0 var(--sand-700), 6px 6px 0 var(--sand-900)
+}
+
+.tetris-head .activity-top-back {
+    order: 3;
+    position: static;
+    float: none;
+    margin-left: auto
+}
+
+.tetris-screen {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(150px, 200px) auto minmax(150px, 200px);
+    grid-template-areas: "left well right";
+    justify-content: center;
+    align-items: start;
+    gap: 22px;
+    margin-top: 10px;
+    padding: 20px 22px;
+    border: 12px solid transparent;
+    border-image: var(--px-slot) 2/12px stretch;
+    background: repeating-linear-gradient(180deg, rgba(190, 255, 190, .035) 0 2px, transparent 2px 4px) padding-box, radial-gradient(120% 90% at 50% 35%, #17381c, #0a170d 80%) padding-box;
+    overflow: hidden
+}
+
+.tetris-side {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+    min-width: 0
+}
+
+.side-left {
+    grid-area: left
+}
+
+.side-right {
+    grid-area: right
+}
+
+.tetris-panel {
+    min-width: 0;
+    padding: 2px 4px 6px;
+    color: var(--ink);
+    border: 12px solid transparent;
+    border-image: var(--px-window) 3/12px stretch;
+    background: var(--win) padding-box
+}
+
+.tetris-panel h2 {
+    margin: 0 0 9px;
+    font: 8px/1 var(--font-pixel);
+    letter-spacing: 1px;
+    color: var(--sand-800)
+}
+
+.panel-hold,
+.panel-next {
+    text-align: center
+}
+
+.panel-hold h2,
+.panel-next h2 {
+    text-align: left
+}
+
+.next-list {
+    display: grid;
+    justify-items: center;
+    gap: 12px
+}
+
+.panel-stats dl {
+    display: grid;
+    gap: 11px;
+    margin: 0
+}
+
+.panel-stats dl>div {
+    display: grid;
+    gap: 5px
+}
+
+.panel-stats dt {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font: 8px/1 var(--font-pixel);
+    letter-spacing: 1px;
+    color: var(--sand-800)
+}
+
+.panel-stats dd {
+    margin: 0;
+    font: 16px/1.1 var(--font-pixel);
+    text-align: right;
+    color: var(--ink)
+}
+
+.stat-score dd {
+    color: var(--sand-900);
+    text-shadow: 2px 2px 0 var(--sand-300)
+}
+
+.stat-best {
+    padding-top: 9px;
+    border-top: 2px dashed var(--sand-400)
+}
+
+.stat-best dd {
+    color: var(--gold-deep)
+}
+
+.lv-bar {
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: 3px;
+    margin-top: 2px
+}
+
+.lv-bar i {
+    height: 6px;
+    background: var(--sand-200);
+    box-shadow: 0 0 0 1px var(--ink)
+}
+
+.lv-bar i.on {
+    background: var(--sand-600)
+}
+
+.panel-keys ul {
+    display: grid;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 500 13px/1.2 var(--font-body);
+    color: var(--text-2)
+}
+
+.panel-keys li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px
+}
+
+.panel-keys li span,
+.tetris-howto li span {
+    display: flex;
+    gap: 3px
+}
+
+.panel-keys kbd {
+    min-width: 22px;
+    height: 22px
+}
+
+.tetris-app kbd .pad-glyph {
+    display: block
+}
+
+.activity-overlay .tetris-pause-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%
+}
+
+.tetris-mini {
+    --b: 16px;
+    --e: 3px;
+    display: inline-grid;
+    grid-template-columns: repeat(var(--w, 4), var(--b));
+    grid-template-rows: repeat(var(--h, 2), var(--b));
+    justify-content: center;
+    align-content: center;
+    min-width: calc(var(--b)*4);
+    min-height: calc(var(--b)*2);
+    vertical-align: middle
+}
+
+.tetris-mini.lg {
+    --b: 18px
+}
+
+.tetris-mini.sm {
+    --b: 12px;
+    --e: 2px
+}
+
+.tetris-mini.empty {
+    display: inline-block;
+    width: calc(var(--b)*4);
+    height: calc(var(--b)*2);
+    background: repeating-linear-gradient(90deg, rgba(59, 42, 30, .12) 0 2px, transparent 2px 6px)
+}
+
+.tetris-mini i {
+    position: relative;
+    background: var(--f);
+    box-shadow: inset 0 0 0 1px #07100a, inset var(--e) var(--e) 0 1px var(--h), inset calc(var(--e)*-1) calc(var(--e)*-1) 0 1px var(--l)
+}
+
+.tetris-mini i:after {
+    content: "";
+    position: absolute;
+    left: calc(var(--e) + 1px);
+    top: calc(var(--e) + 1px);
+    width: var(--e);
+    height: var(--e);
+    background: #fff
+}
+
+.tetris-mini.dim {
+    opacity: .38;
+    filter: grayscale(.7)
+}
+
+.p-I {
+    --f: #41d3ec;
+    --h: #bdf6ff;
+    --l: #1b8fb1
+}
+
+.p-O {
+    --f: #ffd23f;
+    --h: #fff3a6;
+    --l: #c99312
+}
+
+.p-T {
+    --f: #a95ee6;
+    --h: #e0bcff;
+    --l: #6c2fae
+}
+
+.p-S {
+    --f: #62d04c;
+    --h: #c8f6ab;
+    --l: #2f8a2b
+}
+
+.p-Z {
+    --f: #ef4054;
+    --h: #ffa0aa;
+    --l: #a31d35
+}
+
+.p-J {
+    --f: #4274e6;
+    --h: #b2caff;
+    --l: #22409f
+}
+
+.p-L {
+    --f: #ff8b2e;
+    --h: #ffd09a;
+    --l: #b6521a
+}
+
+.tetris-well {
+    grid-area: well;
+    position: relative;
+    display: grid;
+    place-items: center;
+    --bh: clamp(300px, calc(100vh - 318px), 660px);
+    width: calc(var(--bh)/2);
+    height: var(--bh)
+}
+
+@supports (height:100dvh) {
+    .tetris-well {
+        --bh: clamp(300px, calc(100dvh - 318px), 660px)
+    }
+}
+
+.tetris-board {
+    display: block;
+    image-rendering: pixelated;
+    touch-action: none;
+    outline: none;
+    box-shadow: 0 0 0 3px #050b06, 0 0 0 6px var(--sand-700), 0 0 0 9px var(--ink), 0 0 28px 12px #b88a5729
+}
+
+.tetris-board:focus-visible {
+    box-shadow: 0 0 0 3px #050b06, 0 0 0 6px var(--gold), 0 0 0 9px var(--ink), 0 0 28px 12px #ffd23f2e
+}
+
+.tetris-well.thud .tetris-board {
+    animation: tetris-thud .14s steps(2)
+}
+
+.tetris-ready {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font: 20px/1 var(--font-pixel);
+    color: var(--gold);
+    text-shadow: 3px 3px 0 var(--ink), -2px 0 0 var(--ink), 2px 0 0 var(--ink), 0 -2px 0 var(--ink), 0 2px 0 var(--ink);
+    pointer-events: none;
+    animation: px-blink .5s steps(1) infinite
+}
+
+.tetris-ready.go {
+    font-size: 28px;
+    color: var(--sand-300);
+    animation: px-pop .3s steps(3) both
+}
+
+.tetris-pops {
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    z-index: 2;
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    width: max-content;
+    max-width: 120%;
+    translate: -50% 0;
+    pointer-events: none
+}
+
+.tetris-pop {
+    display: grid;
+    justify-items: center;
+    gap: 7px;
+    animation: tetris-pop 1.15s steps(10) forwards
+}
+
+.tetris-pop b {
+    font: 16px/1 var(--font-pixel);
+    white-space: nowrap;
+    color: var(--tone, var(--gold));
+    text-shadow: 3px 3px 0 var(--ink), -2px 0 0 var(--ink), 2px 0 0 var(--ink), 0 -2px 0 var(--ink), 0 2px 0 var(--ink)
+}
+
+.tetris-pop small {
+    padding: 5px 7px 4px;
+    font: 8px/1 var(--font-pixel);
+    white-space: nowrap;
+    color: var(--on-dark);
+    background: #07100ad1;
+    box-shadow: 0 0 0 2px var(--ink)
+}
+
+.tone-gold {
+    --tone: var(--gold)
+}
+
+.tone-pink {
+    --tone: var(--pink)
+}
+
+.tone-sky {
+    --tone: var(--sky)
+}
+
+.tone-leaf {
+    --tone: var(--sand-300)
+}
+
+.tetris-pad {
+    grid-area: pad;
+    display: none;
+    justify-content: space-between;
+    gap: 12px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: none
+}
+
+.pad-move,
+.pad-act {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(56px, 76px));
+    gap: 8px
+}
+
+.activity-overlay .tetris-pad button {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    gap: 4px;
+    min-height: 54px;
+    padding: 6px 4px;
+    touch-action: none;
+    -webkit-tap-highlight-color: transparent
+}
+
+.tetris-pad button.wide {
+    grid-column: span 2
+}
+
+.tetris-pad small {
+    font: 8px/1 var(--font-pixel);
+    letter-spacing: .5px
+}
+
+.pad-hold {
+    font: 10px/1 var(--font-pixel)
+}
+
+.activity-overlay .tetris-pad .drop {
+    --btn-face: var(--gold);
+    --btn-hover: #ffe066;
+    --btn-hi: var(--gold-hi);
+    --btn-lo: var(--gold-lo)
+}
+
+.tetris-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    display: grid;
+    place-items: center;
+    overflow: auto;
+    overscroll-behavior: contain;
+    padding: 18px;
+    background: #050c06bd;
+    animation: px-fade .18s steps(3) both
+}
+
+.tetris-overlay.pause {
+    background: #050c0699
+}
+
+.tetris-card {
+    position: relative;
+    width: min(100%, 540px);
+    margin: auto;
+    padding: 14px 22px 18px;
+    text-align: center;
+    color: var(--ink);
+    border: 12px solid transparent;
+    border-image: var(--px-window) 3/12px stretch;
+    background: var(--win) padding-box;
+    filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, .4));
+    animation: px-pop .26s steps(4) both
+}
+
+.tetris-card h2 {
+    margin: 12px 0 6px;
+    font: 16px/1.5 var(--font-pixel);
+    color: var(--sand-900);
+    text-shadow: 2px 2px 0 var(--sand-300)
+}
+
+.tetris-card p {
+    color: var(--text-2)
+}
+
+.tetris-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px
+}
+
+.activity-overlay .tetris-app .tetris-cta {
+    --btn-face: var(--gold);
+    --btn-hover: #ffe066;
+    --btn-hi: var(--gold-hi);
+    --btn-lo: var(--gold-lo);
+    min-height: 52px;
+    padding: 12px 26px 13px;
+    font: 12px/1.2 var(--font-pixel);
+    color: var(--ink)
+}
+
+.tetris-logo {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 8px 0 14px
+}
+
+.tetris-logo span {
+    font: 34px/1 var(--font-pixel);
+    color: var(--c);
+    text-shadow: 3px 3px 0 var(--ink), -2px 0 0 var(--ink), 2px 0 0 var(--ink), 0 -2px 0 var(--ink), 0 2px 0 var(--ink);
+    animation: tetris-hop 2.4s steps(1) infinite
+}
+
+.tetris-logo span:nth-child(2) {
+    animation-delay: .15s
+}
+
+.tetris-logo span:nth-child(3) {
+    animation-delay: .3s
+}
+
+.tetris-logo span:nth-child(4) {
+    animation-delay: .45s
+}
+
+.tetris-logo span:nth-child(5) {
+    animation-delay: .6s
+}
+
+.tetris-logo span:nth-child(6) {
+    animation-delay: .75s
+}
+
+.tetris-lead {
+    max-width: 430px;
+    margin: 0 auto;
+    font-size: 17px
+}
+
+.tetris-howto {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 22px;
+    max-width: 430px;
+    margin: 16px auto 4px;
+    padding: 12px 14px;
+    list-style: none;
+    text-align: left;
+    font: 500 15px/1.2 var(--font-body);
+    color: var(--text-2);
+    background: var(--sand-50);
+    box-shadow: 0 0 0 2px var(--ink), inset -3px -3px 0 var(--sand-200)
+}
+
+.tetris-howto li {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.tetris-howto li span {
+    min-width: 60px
+}
+
+.touch-tip {
+    display: none;
+    margin-top: 14px
+}
+
+.tetris-best {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 14px 0 4px;
+    font: 600 15px/1.3 var(--font-body);
+    color: var(--sand-800)
+}
+
+.tetris-banner {
+    display: inline-block;
+    padding: 8px 12px 7px;
+    font: 12px/1 var(--font-pixel);
+    letter-spacing: 2px;
+    color: var(--cream);
+    background: var(--sand-800);
+    box-shadow: 0 0 0 3px var(--ink), 4px 4px 0 3px #0000004d;
+    animation: px-blink 1.2s steps(1) infinite
+}
+
+.tetris-banner.over {
+    margin-top: 6px;
+    padding: 0;
+    font-size: 26px;
+    letter-spacing: 1px;
+    color: var(--red);
+    background: none;
+    box-shadow: none;
+    text-shadow: 3px 3px 0 var(--ink), -2px 0 0 var(--ink), 2px 0 0 var(--ink), 0 -2px 0 var(--ink), 0 2px 0 var(--ink);
+    animation: tetris-fall .5s steps(5) both
+}
+
+.record-badge {
+    position: absolute;
+    top: -16px;
+    right: -12px;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px 7px;
+    font: 8px/1 var(--font-pixel);
+    color: var(--ink);
+    background: var(--gold);
+    box-shadow: 0 0 0 3px var(--ink), inset -3px -3px 0 var(--gold-lo), inset 3px 3px 0 var(--gold-hi);
+    rotate: 6deg;
+    animation: px-stamp .5s steps(5) .3s both
+}
+
+.final-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+    margin: 16px 0 0
+}
+
+.final-stats div {
+    padding: 9px 4px 8px;
+    background: var(--sand-50);
+    box-shadow: 0 0 0 2px var(--ink), inset -3px -3px 0 var(--sand-200)
+}
+
+.final-stats dt {
+    font: 8px/1 var(--font-pixel);
+    letter-spacing: 1px;
+    color: var(--sand-800)
+}
+
+.final-stats dd {
+    margin: 8px 0 0;
+    font: 14px/1 var(--font-pixel);
+    color: var(--ink)
+}
+
+.gombal-note {
+    position: relative;
+    margin: 26px 6px 4px;
+    padding: 14px 18px 10px;
+    text-align: left;
+    color: var(--paper-ink);
+    border: 12px solid transparent;
+    border-image: var(--px-paper) 3/12px stretch;
+    background: var(--px-grain) 0 0/64px 64px repeat padding-box, var(--paper) padding-box;
+    rotate: -1deg;
+    filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, .22));
+    animation: px-pop .3s steps(4) .25s both
+}
+
+.gombal-note blockquote {
+    margin: 0;
+    font: 600 17px/1.55 var(--font-body);
+    color: var(--paper-ink)
+}
+
+.gombal-note figcaption {
+    margin-top: 8px;
+    text-align: right;
+    font: 600 15px/1.2 var(--font-body);
+    color: var(--paper-ink-2)
+}
+
+.note-heart {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    translate: -50% 0;
+    background: var(--paper-hi);
+    box-shadow: 0 0 0 3px var(--paper-ink), 3px 3px 0 3px #0003;
+    animation: px-beat 1s steps(2) infinite
+}
+
+.typewriter {
+    display: grid;
+    cursor: pointer
+}
+
+.typewriter>.tw-space,
+.typewriter>.tw-live {
+    grid-area: 1/1
+}
+
+.tw-space {
+    visibility: hidden
+}
+
+.type-caret {
+    display: inline-block;
+    width: 9px;
+    height: 3px;
+    margin-left: 3px;
+    vertical-align: baseline;
+    background: var(--paper-ink);
+    animation: px-blink .6s steps(1) infinite
+}
+
+.cabinet-deck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    width: min(100%, 640px);
+    margin: 16px auto 0;
+    padding: 14px 30px 12px;
+    background: linear-gradient(180deg, #5a3d22 0 50%, #4d331c 50%);
+    box-shadow: 0 0 0 4px var(--ink), inset 0 4px #7a5530, inset 0 -4px #132c10, 0 8px #0000004d
+}
+
+.deck-stick {
+    position: relative;
+    width: 56px;
+    height: 52px
+}
+
+.deck-stick:before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    bottom: 0;
+    height: 12px;
+    background: #24190f;
+    box-shadow: 0 0 0 3px var(--ink), inset 0 3px #4d351e
+}
+
+.deck-stick:after {
+    content: "";
+    position: absolute;
+    left: 25px;
+    bottom: 10px;
+    width: 6px;
+    height: 22px;
+    background: #3b3f45;
+    box-shadow: 0 0 0 2px var(--ink)
+}
+
+.deck-stick i {
+    position: absolute;
+    left: 14px;
+    top: 0;
+    z-index: 1;
+    width: 28px;
+    height: 26px;
+    background: var(--red);
+    box-shadow: inset -5px -5px 0 var(--red-lo), inset 5px 5px 0 var(--red-hi);
+    clip-path: polygon(25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25%);
+    animation: tetris-wiggle 2.4s steps(1) infinite
+}
+
+.deck-coin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    background: #24190f;
+    box-shadow: 0 0 0 3px var(--ink), inset 0 3px #000
+}
+
+.deck-coin i {
+    width: 5px;
+    height: 20px;
+    background: var(--gold);
+    box-shadow: 0 0 0 2px var(--ink), 0 0 10px 2px #ffd23f73;
+    animation: px-blink 1.2s steps(1) infinite
+}
+
+.deck-coin b {
+    font: 8px/1 var(--font-pixel);
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--gold)
+}
+
+.deck-buttons {
+    display: flex;
+    gap: 12px
+}
+
+.deck-buttons i {
+    width: 30px;
+    height: 30px;
+    background: var(--b, var(--red));
+    box-shadow: inset -5px -5px 0 var(--bl, var(--red-lo)), inset 5px 5px 0 var(--bh, var(--red-hi));
+    clip-path: polygon(25% 0, 75% 0, 100% 25%, 100% 75%, 75% 100%, 25% 100%, 0 75%, 0 25%)
+}
+
+.deck-buttons i:nth-child(2) {
+    --b: var(--gold);
+    --bl: var(--gold-lo);
+    --bh: var(--gold-hi);
+    translate: 0 -8px
+}
+
+.deck-buttons i:nth-child(3) {
+    --b: var(--sky);
+    --bl: #2f7fc0;
+    --bh: #bfe6ff
+}
+
+@keyframes tetris-wiggle {
+
+    0%,
+    to {
+        translate: 0 0
+    }
+
+    30% {
+        translate: -3px 0
+    }
+
+    36% {
+        translate: 3px 0
+    }
+
+    42% {
+        translate: 0 0
+    }
+}
+
+@keyframes tetris-thud {
+    50% {
+        translate: 0 4px
+    }
+}
+
+@keyframes tetris-pop {
+    0% {
+        opacity: 0;
+        scale: .5
+    }
+
+    12% {
+        opacity: 1;
+        scale: 1.15
+    }
+
+    22% {
+        scale: 1
+    }
+
+    75% {
+        opacity: 1;
+        translate: 0 -10px
+    }
+
+    to {
+        opacity: 0;
+        translate: 0 -24px
+    }
+}
+
+@keyframes tetris-hop {
+
+    0%,
+    78%,
+    to {
+        translate: 0 0
+    }
+
+    84% {
+        translate: 0 -6px
+    }
+}
+
+@keyframes tetris-fall {
+    0% {
+        translate: 0 -24px;
+        opacity: 0
+    }
+}
+
+@media(max-height:860px), (max-width:700px), (pointer:coarse) {
+    .cabinet-deck {
+        display: none
+    }
+}
+
+@media(max-width:960px) {
+    .activity-overlay.arcade {
+        padding: 14px 16px
+    }
+
+    .activity-overlay.arcade .activity-shell {
+        padding: 6px 12px 2px;
+        border-width: 14px
+    }
+
+    .tetris-screen {
+        grid-template-columns: minmax(118px, 160px) auto minmax(118px, 160px);
+        gap: 14px;
+        padding: 14px 12px;
+        border-width: 10px
+    }
+
+    .panel-stats dd {
+        font-size: 12px
+    }
+
+    .tetris-mini.lg {
+        --b: 16px
+    }
+}
+
+@media(pointer:coarse) {
+    .tetris-screen {
+        grid-template-areas: "left well right" "pad pad pad"
+    }
+
+    .tetris-well {
+        --bh: clamp(280px, calc(100vh - 470px), 660px)
+    }
+
+    @supports (height:100dvh) {
+        .tetris-well {
+            --bh: clamp(280px, calc(100dvh - 470px), 660px)
+        }
+    }
+}
+
+@media(pointer:coarse), (max-width:700px) {
+    .tetris-pad {
+        display: flex
+    }
+
+    .panel-keys,
+    .tetris-howto {
+        display: none
+    }
+
+    .touch-tip {
+        display: block
+    }
+}
+
+@media(max-width:700px) {
+    .activity-overlay.arcade {
+        padding: 8px
+    }
+
+    .activity-overlay.arcade .activity-shell {
+        padding: 4px 8px 0;
+        border-width: 10px
+    }
+
+    .activity-overlay.arcade .activity-shell:before {
+        display: none
+    }
+
+    .tetris-head {
+        gap: 6px 10px
+    }
+
+    .tetris-head .activity-kicker {
+        flex-basis: auto;
+        margin-top: 0
+    }
+
+    .activity-overlay.arcade .tetris-head h1 {
+        order: 3;
+        flex-basis: 100%;
+        margin: 2px 0 0;
+        font-size: 18px;
+        text-shadow: 2px 2px 0 var(--sand-700), 4px 4px 0 var(--sand-900)
+    }
+
+    .activity-overlay .tetris-head .activity-top-back {
+        order: 2;
+        display: inline-flex;
+        min-height: 40px;
+        padding: 6px 10px 8px;
+        font-size: 13px !important
+    }
+
+    .tetris-screen {
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas: "left right" "well well" "pad pad";
+        gap: 10px;
+        margin-top: 8px;
+        padding: 10px;
+        border-width: 8px
+    }
+
+    .side-left,
+    .side-right {
+        display: flex;
+        gap: 6px;
+        align-items: stretch
+    }
+
+    .tetris-panel {
+        padding: 0 2px 3px;
+        border-width: 6px
+    }
+
+    .tetris-panel h2 {
+        margin-bottom: 5px
+    }
+
+    .panel-hold {
+        flex: none;
+        min-width: 58px
+    }
+
+    .panel-stats {
+        flex: 1
+    }
+
+    .panel-stats dl {
+        gap: 4px
+    }
+
+    .panel-stats dl>div {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 6px
+    }
+
+    .panel-stats .stat-score {
+        display: grid;
+        justify-content: stretch;
+        gap: 3px
+    }
+
+    .panel-stats dd {
+        font-size: 8px
+    }
+
+    .panel-stats .stat-score dd {
+        font-size: 12px
+    }
+
+    .panel-stats .stat-best,
+    .panel-stats .lv-bar {
+        display: none
+    }
+
+    .next-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px
+    }
+
+    .next-list .tetris-mini:nth-child(n+2) {
+        display: none
+    }
+
+    .panel-next {
+        min-width: 58px
+    }
+
+    .tetris-mini {
+        --b: 9px;
+        --e: 2px
+    }
+
+    .tetris-mini.lg {
+        --b: 10px
+    }
+
+    .activity-overlay .tetris-pause-btn {
+        width: 44px;
+        min-height: 0;
+        padding: 4px
+    }
+
+    .tetris-pause-btn span {
+        display: none
+    }
+
+    .tetris-well {
+        justify-self: center;
+        --bh: clamp(260px, calc(100vh - 410px), 620px)
+    }
+
+    @supports (height:100dvh) {
+        .tetris-well {
+            --bh: clamp(260px, calc(100dvh - 410px), 620px)
+        }
+    }
+
+    .tetris-banner.over {
+        font-size: 20px
+    }
+
+    .record-badge {
+        top: -24px;
+        right: -4px
+    }
+
+    .tetris-overlay {
+        padding: 10px
+    }
+
+    .tetris-card {
+        padding: 10px 12px 14px
+    }
+
+    .tetris-logo span {
+        font-size: 24px
+    }
+
+    .tetris-lead {
+        font-size: 16px
+    }
+
+    .final-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .gombal-note blockquote {
+        font-size: 16px
+    }
+
+    .record-badge {
+        right: -6px
+    }
+}
+
+@media(max-height:500px)and (orientation:landscape) {
+    .activity-overlay.arcade {
+        padding: 6px 10px
+    }
+
+    .activity-overlay.arcade .activity-shell {
+        padding: 2px 10px 0;
+        border-width: 8px
+    }
+
+    .activity-overlay.arcade .activity-shell:before {
+        display: none
+    }
+
+    .tetris-head {
+        flex-wrap: nowrap;
+        gap: 12px
+    }
+
+    .tetris-head .activity-kicker {
+        flex-basis: auto
+    }
+
+    .activity-overlay.arcade .tetris-head h1 {
+        margin: 0;
+        font-size: 16px;
+        text-shadow: 2px 2px 0 var(--sand-700), 4px 4px 0 var(--sand-900)
+    }
+
+    .activity-overlay .tetris-head .activity-top-back {
+        min-height: 38px;
+        padding: 5px 10px 7px;
+        font-size: 13px !important
+    }
+
+    .tetris-screen {
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+        grid-template-areas: "left well right";
+        gap: 8px 14px;
+        margin-top: 6px;
+        padding: 8px;
+        border-width: 8px
+    }
+
+    .tetris-side {
+        gap: 8px
+    }
+
+    .tetris-panel {
+        padding: 0 2px 3px;
+        border-width: 6px
+    }
+
+    .tetris-panel h2 {
+        margin-bottom: 5px
+    }
+
+    .panel-stats dl {
+        gap: 4px
+    }
+
+    .panel-stats dl>div {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 6px
+    }
+
+    .panel-stats dd {
+        font-size: 8px
+    }
+
+    .panel-stats .stat-score dd {
+        font-size: 12px
+    }
+
+    .panel-keys,
+    .panel-stats .stat-best,
+    .panel-stats .lv-bar {
+        display: none
+    }
+
+    .next-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px
+    }
+
+    .next-list .tetris-mini:nth-child(n+3) {
+        display: none
+    }
+
+    .tetris-mini {
+        --b: 9px;
+        --e: 2px
+    }
+
+    .tetris-mini.lg {
+        --b: 10px
+    }
+
+    .activity-overlay .tetris-pause-btn {
+        min-height: 38px;
+        padding: 4px 8px
+    }
+
+    .tetris-well {
+        --bh: clamp(200px, calc(100vh - 112px), 420px)
+    }
+
+    @supports (height:100dvh) {
+        .tetris-well {
+            --bh: clamp(200px, calc(100dvh - 112px), 420px)
+        }
+    }
+
+    .tetris-pad {
+        display: none
+    }
+
+    .tetris-overlay {
+        padding: 8px
+    }
+
+    .tetris-card {
+        padding: 8px 14px 12px
+    }
+
+    .tetris-logo {
+        margin: 2px 0 8px
+    }
+
+    .tetris-logo span {
+        font-size: 22px
+    }
+
+    .tetris-lead {
+        font-size: 14px
+    }
+
+    .touch-tip {
+        margin-top: 6px
+    }
+
+    .tetris-best {
+        margin: 8px 0 0
+    }
+
+    .tetris-banner.over {
+        margin-top: 0;
+        font-size: 18px
+    }
+
+    .record-badge {
+        top: -14px
+    }
+
+    .final-stats {
+        margin-top: 8px;
+        gap: 6px
+    }
+
+    .final-stats div {
+        padding: 5px 4px
+    }
+
+    .final-stats dd {
+        margin-top: 4px;
+        font-size: 12px
+    }
+
+    .gombal-note {
+        margin: 18px 4px 2px;
+        padding: 8px 12px 6px
+    }
+
+    .gombal-note blockquote {
+        font-size: 15px;
+        line-height: 1.4
+    }
+
+    .gombal-note figcaption {
+        margin-top: 4px
+    }
+
+    .tetris-actions {
+        margin-top: 10px
+    }
+
+    .activity-overlay .tetris-app .tetris-cta {
+        min-height: 44px;
+        padding: 9px 18px 10px
+    }
+}
+
+@media(max-height:500px)and (orientation:landscape)and (pointer:coarse) {
+    .tetris-screen {
+        grid-template-areas: "left well right" "lpad well rpad"
+    }
+
+    .tetris-pad {
+        display: contents
+    }
+
+    .pad-move {
+        grid-area: lpad;
+        align-self: end
+    }
+
+    .pad-act {
+        grid-area: rpad;
+        align-self: end
+    }
+
+    .pad-move,
+    .pad-act {
+        grid-template-columns: repeat(2, minmax(48px, 62px));
+        gap: 6px
+    }
+
+    .activity-overlay .tetris-pad button {
+        min-height: 44px;
+        padding: 3px
+    }
+}

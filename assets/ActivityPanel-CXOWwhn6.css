@@ -1,0 +1,146 @@
+.activity-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    overflow: auto;
+    overscroll-behavior: contain;
+    padding: 24px;
+    color: var(--on-dark);
+    font: 500 16px/1.5 var(--font-body);
+    background: var(--px-stars) 0 0/128px 128px repeat, var(--forest);
+    animation: px-fade .2s steps(3) both
+}
+
+.activity-shell {
+    position: relative;
+    max-width: 1100px;
+    min-height: 100%;
+    margin: auto
+}
+
+.activity-overlay button,
+.activity-overlay select {
+    min-height: 46px;
+    padding: 8px 18px 10px;
+    font: 600 16px/1.15 var(--font-body);
+    color: var(--btn-text);
+    border: var(--u) solid transparent;
+    border-image: var(--px-btn) 1/var(--u) stretch;
+    background: var(--btn-face) padding-box;
+    box-shadow: inset -4px -4px 0 var(--btn-lo), inset 4px 4px 0 var(--btn-hi);
+    text-shadow: none
+}
+
+.activity-overlay button:hover:not(:disabled) {
+    background-color: var(--btn-hover)
+}
+
+.activity-overlay button:active:not(:disabled) {
+    translate: 0 2px;
+    box-shadow: inset 4px 4px 0 var(--btn-lo)
+}
+
+.activity-overlay button:disabled {
+    opacity: .5;
+    cursor: default
+}
+
+.activity-overlay h1 {
+    margin: 16px 0 18px;
+    font: 36px/1.35 var(--font-pixel);
+    color: var(--cream);
+    text-shadow: 4px 4px 0 var(--sand-700), 8px 8px 0 var(--sand-900)
+}
+
+.activity-kicker {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 14px;
+    font: 8px/1.6 var(--font-pixel);
+    letter-spacing: 1px;
+    color: var(--sand-300)
+}
+
+.coin-light {
+    width: 12px;
+    height: 12px;
+    background: var(--red);
+    box-shadow: 0 0 0 2px var(--ink);
+    animation: px-blink 1s steps(1) infinite
+}
+
+.activity-lead {
+    margin-bottom: 28px;
+    font-size: 18px;
+    color: var(--on-dark-2)
+}
+
+.activity-top-back {
+    position: sticky;
+    top: 0;
+    float: right;
+    z-index: 4;
+    font-size: 15px !important
+}
+
+.activity-back {
+    margin-top: 18px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border-image: none !important;
+    border-color: transparent !important;
+    color: var(--on-dark-2) !important
+}
+
+.activity-back:hover {
+    color: var(--gold) !important
+}
+
+.arcade-content:after,
+.photo-content:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.activity-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 70vh;
+    font: 12px/1.6 var(--font-pixel);
+    color: var(--on-dark)
+}
+
+.photoBooth .activity-loading {
+    color: var(--paper-ink)
+}
+
+@media(max-width:700px) {
+    .activity-overlay {
+        padding: 16px 12px
+    }
+
+    .activity-overlay h1 {
+        font-size: 20px;
+        text-shadow: 3px 3px 0 var(--sand-700), 6px 6px 0 var(--sand-900)
+    }
+
+    .activity-top-back {
+        float: none;
+        display: block;
+        margin-left: auto
+    }
+
+    .activity-kicker {
+        margin-top: 18px
+    }
+}
+
+@media(max-height:500px)and (min-width:701px) {
+    .activity-overlay h1 {
+        font-size: 22px
+    }
+}

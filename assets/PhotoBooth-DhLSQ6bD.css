@@ -1,0 +1,875 @@
+.activity-overlay.photoBooth {
+    color: var(--paper-ink);
+    background: var(--px-grain) 0 0/64px 64px repeat, repeating-linear-gradient(90deg, #f8e9c4 0 48px, #f3dfb2 48px 96px)
+}
+
+.activity-overlay.photoBooth .activity-shell {
+    max-width: 1140px
+}
+
+.activity-overlay.photoBooth .activity-kicker {
+    color: #a8401c
+}
+
+.activity-overlay.photoBooth h1 {
+    color: #5a2d10;
+    text-shadow: 3px 3px 0 #ff92b6, 6px 6px 0 #e6c387
+}
+
+.activity-overlay.photoBooth h1 em {
+    color: #b8322b
+}
+
+.activity-overlay.photoBooth :focus-visible {
+    outline-color: var(--paper-ink)
+}
+
+.activity-overlay.photoBooth .activity-back {
+    color: #7a4a24 !important
+}
+
+.activity-overlay.photoBooth .activity-back:hover {
+    color: #b8322b !important
+}
+
+.photo-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none
+}
+
+.photo-steps li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 6px 14px 6px 6px;
+    font: 600 15px/1.2 var(--font-body);
+    color: var(--paper-ink-2);
+    background: #fff6dc;
+    box-shadow: 0 0 0 2px var(--paper-ink), 4px 4px 0 2px #3a24122e
+}
+
+.photo-steps li b {
+    display: grid;
+    place-items: center;
+    flex: none;
+    width: 26px;
+    height: 26px;
+    font: 8px/1 var(--font-pixel);
+    font-weight: 400;
+    color: var(--paper-ink);
+    background: #f0d9a6;
+    box-shadow: 0 0 0 2px var(--paper-ink)
+}
+
+.photo-steps li.current {
+    color: var(--ink);
+    background: var(--sand-200);
+    box-shadow: 0 0 0 2px var(--ink), 4px 4px 0 2px #3a24122e
+}
+
+.photo-steps li.current b {
+    color: var(--ink);
+    background: var(--gold);
+    box-shadow: 0 0 0 2px var(--ink), inset -2px -2px 0 var(--gold-lo);
+    animation: px-beat 1.2s steps(2) infinite
+}
+
+.photo-steps li.done {
+    color: var(--sand-800)
+}
+
+.photo-steps li.done b {
+    color: #fff;
+    background: var(--sand-600);
+    box-shadow: 0 0 0 2px var(--ink)
+}
+
+.photo-workspace {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 40px;
+    align-items: start;
+    margin: 0 0 18px
+}
+
+.photo-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    min-width: 0
+}
+
+.photo-right {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    min-width: 0
+}
+
+.source-options {
+    width: 100%;
+    max-width: 500px
+}
+
+.source-options>p {
+    margin-bottom: 4px;
+    font: 600 18px/1.5 var(--font-body)
+}
+
+.activity-overlay .source-options button {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 18px;
+    row-gap: 4px;
+    align-items: center;
+    width: 100%;
+    margin: 14px 0;
+    padding: 16px 20px;
+    text-align: left
+}
+
+.source-art {
+    grid-row: 1/3;
+    display: grid;
+    place-items: center;
+    width: 64px;
+    height: 72px;
+    background: #fffdf4;
+    box-shadow: 0 0 0 3px var(--ink), inset -3px -3px #e6d3a8
+}
+
+.avatar-art {
+    background-color: #fffdf4;
+    background-repeat: no-repeat;
+    background-size: 800% 600%;
+    image-rendering: auto
+}
+
+.source-options strong {
+    font: 14px/1.5 var(--font-pixel);
+    font-weight: 400;
+    color: var(--ink)
+}
+
+.source-options button>span:last-child {
+    font: 500 15px/1.45 var(--font-body);
+    color: var(--text-2)
+}
+
+.photo-view {
+    position: relative;
+    width: min(100%, 43.2dvh);
+    aspect-ratio: 4/5;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #b7bbb0;
+    border: 12px solid transparent;
+    border-image: var(--px-btn) 1/12px stretch;
+    box-shadow: 8px 8px #3a241240
+}
+
+.photo-view>canvas,
+.photo-view>video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.photo-view>canvas.pop {
+    animation: photo-pop .3s steps(3)
+}
+
+.camera-preview {
+    transform: scaleX(-1)
+}
+
+.viewfinder {
+    position: absolute;
+    inset: 14px;
+    z-index: 2;
+    pointer-events: none
+}
+
+.viewfinder i {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 0 solid #fff;
+    filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, .5))
+}
+
+.viewfinder i:nth-child(1) {
+    left: 0;
+    top: 0;
+    border-width: 6px 0 0 6px
+}
+
+.viewfinder i:nth-child(2) {
+    right: 0;
+    top: 0;
+    border-width: 6px 6px 0 0
+}
+
+.viewfinder i:nth-child(3) {
+    left: 0;
+    bottom: 0;
+    border-width: 0 0 6px 6px
+}
+
+.viewfinder i:nth-child(4) {
+    right: 0;
+    bottom: 0;
+    border-width: 0 6px 6px 0
+}
+
+.viewfinder b {
+    position: absolute;
+    top: 6px;
+    right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font: 8px/1 var(--font-pixel);
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .6)
+}
+
+.viewfinder b:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: var(--red);
+    animation: px-blink 1s steps(1) infinite
+}
+
+.photo-quota,
+.view-tag {
+    position: absolute;
+    bottom: 14px;
+    z-index: 3;
+    padding: 6px 8px 5px;
+    font: 8px/1 var(--font-pixel);
+    color: #fff;
+    background: var(--ink);
+    box-shadow: 0 0 0 2px #fff
+}
+
+.photo-quota {
+    left: 16px
+}
+
+.view-tag {
+    right: 16px;
+    max-width: calc(100% - 120px);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-transform: uppercase
+}
+
+.photo-view.developing:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: repeating-linear-gradient(90deg, rgba(255, 255, 255, .22) 0 16px, transparent 16px 32px);
+    animation: px-shimmer .5s steps(4) infinite;
+    pointer-events: none
+}
+
+.photo-count {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: grid;
+    place-items: center;
+    font: 120px/1 var(--font-pixel);
+    color: #fff;
+    background: #0e0c2047;
+    text-shadow: 8px 8px 0 var(--ink);
+    animation: px-pop .3s steps(3) both
+}
+
+.photo-flash {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    background: #fff;
+    pointer-events: none;
+    animation: photo-flash .55s steps(5) forwards
+}
+
+.camera-enable {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    background: #f8e9c4e0
+}
+
+.shutter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: min(100%, 43.2dvh)
+}
+
+.activity-overlay .capture-photo {
+    flex: 1 1 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 58px;
+    font: 12px/1.2 var(--font-pixel);
+    color: #fff;
+    --btn-face: var(--red);
+    --btn-hover: #ff5468;
+    --btn-hi: var(--red-hi);
+    --btn-lo: var(--red-lo);
+    text-shadow: 2px 2px 0 var(--red-lo)
+}
+
+.activity-overlay .cancel-count {
+    flex: 1 1 140px
+}
+
+.activity-overlay .source-switch {
+    min-height: 40px;
+    padding: 6px 10px;
+    font-size: 15px;
+    color: #7a4a24;
+    background: transparent;
+    border-color: transparent;
+    border-image: none;
+    box-shadow: none;
+    text-decoration: underline;
+    text-underline-offset: 4px
+}
+
+.activity-overlay .source-switch:hover:not(:disabled) {
+    color: #b8322b;
+    background: transparent
+}
+
+.photo-thumbnails {
+    display: flex;
+    gap: 10px;
+    width: min(100%, 43.2dvh);
+    padding: 16px 12px;
+    background: repeating-linear-gradient(90deg, #fff6dc 0 8px, transparent 8px 20px) 0 4px/100% 6px no-repeat, repeating-linear-gradient(90deg, #fff6dc 0 8px, transparent 8px 20px) 0 calc(100% - 4px) /100% 6px no-repeat, var(--ink);
+    box-shadow: 6px 6px #3a241240
+}
+
+.photo-thumbnails>* {
+    display: grid;
+    place-items: center;
+    width: calc((100% - 20px)/3);
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    font: 16px var(--font-pixel);
+    color: #b39572;
+    background: #3a2a1f
+}
+
+.photo-thumbnails>img {
+    animation: photo-drop .5s steps(5) both
+}
+
+.photo-panel {
+    padding: 10px 14px 14px;
+    color: var(--paper-ink);
+    border: 12px solid transparent;
+    border-image: var(--px-cream) 3/12px stretch;
+    background: #fffaee padding-box;
+    filter: drop-shadow(5px 5px 0 rgba(58, 36, 18, .16))
+}
+
+.photo-panel header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 12px
+}
+
+.photo-panel h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: none;
+    font: 12px/1.4 var(--font-pixel);
+    color: #5a2d10
+}
+
+.panel-note {
+    min-width: 0;
+    font: 500 14px/1.35 var(--font-body);
+    text-align: right;
+    color: var(--paper-ink-2)
+}
+
+.pose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(72px, 1fr));
+    gap: 10px
+}
+
+.backdrop-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px
+}
+
+.activity-overlay :is(.pose-tile, .backdrop-tile) {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: 5px;
+    min-height: 0;
+    padding: 8px 4px 7px;
+    font: 600 14px/1.1 var(--font-body);
+    color: var(--paper-ink);
+    background: #fffdf4 padding-box;
+    box-shadow: inset -3px -3px #e6d3a8, inset 3px 3px #fff
+}
+
+.activity-overlay :is(.pose-tile, .backdrop-tile):hover:not(:disabled) {
+    background-color: #fff1c9
+}
+
+.activity-overlay :is(.pose-tile, .backdrop-tile)[aria-pressed=true] {
+    color: var(--ink);
+    background-color: var(--gold-hi);
+    box-shadow: 0 0 0 3px var(--gold), inset -3px -3px 0 var(--gold-lo), inset 3px 3px #fff
+}
+
+:is(.pose-tile, .backdrop-tile)[aria-pressed=true]:after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    right: -9px;
+    width: 22px;
+    height: 22px;
+    background: var(--sand-500) var(--px-box-check) center/12px 12px no-repeat;
+    box-shadow: 0 0 0 2px var(--ink), inset -2px -2px 0 var(--sand-700);
+    animation: px-pop .25s steps(3) both
+}
+
+.pose-sprite {
+    display: block;
+    width: 48px;
+    height: 64px;
+    background-repeat: no-repeat
+}
+
+.pose-tile[aria-pressed=true] .pose-sprite {
+    animation: px-bob .6s steps(2) infinite
+}
+
+.pose-tile[data-pose=lompat] .pose-sprite {
+    translate: 0 -6px;
+    filter: drop-shadow(0 6px 0 rgba(58, 36, 18, .18))
+}
+
+.pose-name {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.activity-overlay .backdrop-tile {
+    padding: 6px 3px;
+    font-size: 13px
+}
+
+.backdrop-swatch {
+    display: block;
+    width: 100%;
+    max-width: 56px;
+    aspect-ratio: 4/5;
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+    box-shadow: 0 0 0 2px var(--ink)
+}
+
+.bd-studio {
+    background: repeating-linear-gradient(0deg, #e4e0d6 0 1px, transparent 1px 4px), repeating-linear-gradient(90deg, #e4e0d6 0 1px, transparent 1px 4px), #f4f2eb
+}
+
+.tips-panel h2 {
+    margin-bottom: 10px
+}
+
+.tips-panel ul {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding-left: 20px;
+    font: 500 15px/1.45 var(--font-body);
+    color: var(--paper-ink-2)
+}
+
+.frame-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px
+}
+
+.frame-select {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 12px 16px;
+    width: 100%
+}
+
+.frame-select label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font: 600 15px var(--font-body)
+}
+
+.activity-overlay .frame-select select {
+    max-width: 240px;
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 36px;
+    background: var(--px-select) right 10px center/14px 10px no-repeat, var(--btn-face) padding-box
+}
+
+.frame-colors {
+    display: flex;
+    gap: 10px
+}
+
+.activity-overlay .frame-colors button {
+    width: 44px;
+    min-height: 44px;
+    padding: 0;
+    border: 0;
+    border-image: none;
+    box-shadow: 0 0 0 3px var(--ink), inset -4px -4px #00000038
+}
+
+.activity-overlay .frame-colors [aria-pressed=true] {
+    box-shadow: 0 0 0 3px var(--ink), 0 0 0 7px var(--gold), inset -4px -4px #00000038
+}
+
+.frame-preview {
+    max-width: 100%;
+    max-height: 34vh;
+    object-fit: contain;
+    box-shadow: 0 0 0 4px var(--ink), 10px 10px 0 4px #3a241233
+}
+
+.is-complete .frame-preview,
+.photo-content:not(.is-shooting) .frame-preview {
+    max-height: 60vh
+}
+
+.frame-panel small {
+    text-align: center;
+    line-height: 1.6;
+    font-size: 14px;
+    color: var(--paper-ink-2)
+}
+
+.photo-complete {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px 0 6px
+}
+
+.photo-complete h2 {
+    font: 16px/1.5 var(--font-pixel);
+    color: #5a2d10
+}
+
+.complete-badge {
+    display: grid;
+    place-items: center;
+    width: 84px;
+    height: 84px;
+    color: #fff;
+    background: var(--green);
+    box-shadow: 0 0 0 4px var(--ink), inset -6px -6px 0 var(--green-lo), 6px 6px 0 4px #3a241240;
+    animation: px-pop .3s steps(3) both
+}
+
+.complete-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px
+}
+
+.activity-overlay .download-png {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    --btn-face: var(--gold);
+    --btn-hover: #ffe066;
+    --btn-hi: var(--gold-hi);
+    --btn-lo: var(--gold-lo)
+}
+
+.download-png .px-icon {
+    rotate: 90deg
+}
+
+.photo-complete a {
+    font-weight: 600;
+    color: #b8322b;
+    text-decoration: underline
+}
+
+.photo-message {
+    margin: 4px 0;
+    font-weight: 600;
+    color: var(--sand-800)
+}
+
+.photo-confirm {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    padding: 30px;
+    text-align: center;
+    color: var(--on-dark);
+    background: var(--px-dither) 0 0/4px 4px repeat, #0a1a089e
+}
+
+.photo-confirm h2 {
+    font: 16px/1.5 var(--font-pixel);
+    color: var(--on-dark);
+    text-shadow: 3px 3px 0 var(--ink)
+}
+
+.photo-confirm p {
+    max-width: 440px;
+    line-height: 1.7
+}
+
+.activity-error {
+    padding: 12px 14px;
+    color: #fff;
+    background: #b8322b;
+    box-shadow: 0 0 0 3px var(--ink)
+}
+
+@keyframes photo-flash {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes photo-drop {
+    0% {
+        translate: 0 -28px;
+        opacity: 0
+    }
+
+    60% {
+        translate: 0 4px;
+        opacity: 1
+    }
+}
+
+@keyframes photo-pop {
+    0% {
+        scale: .96;
+        filter: brightness(1.3)
+    }
+}
+
+@media(max-width:960px)and (min-width:701px) {
+    .photo-workspace {
+        gap: 24px
+    }
+
+    .pose-grid {
+        grid-template-columns: repeat(auto-fill, minmax(72px, 1fr))
+    }
+
+    .backdrop-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+}
+
+@media(max-width:700px) {
+    .photoBooth h1 {
+        text-shadow: 2px 2px 0 #ff92b6, 4px 4px 0 #e6c387
+    }
+
+    .photo-steps {
+        gap: 8px;
+        margin-bottom: 18px
+    }
+
+    .photo-steps li {
+        padding: 5px 10px 5px 5px;
+        font-size: 13px
+    }
+
+    .photo-steps li:not(.current) span {
+        display: none
+    }
+
+    .photo-steps li:not(.current) {
+        padding-right: 5px
+    }
+
+    .photo-workspace {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px
+    }
+
+    .photo-left,
+    .photo-right {
+        display: contents
+    }
+
+    .source-options,
+    .photo-complete {
+        order: 1
+    }
+
+    .photo-view {
+        order: 1;
+        width: min(100%, 340px)
+    }
+
+    .pose-panel {
+        order: 2
+    }
+
+    .backdrop-panel {
+        order: 3
+    }
+
+    .shutter-row {
+        order: 4;
+        width: min(100%, 340px);
+        align-self: center
+    }
+
+    .source-switch {
+        order: 5;
+        align-self: center
+    }
+
+    .photo-thumbnails {
+        order: 6;
+        width: min(100%, 340px);
+        align-self: center
+    }
+
+    .tips-panel {
+        order: 7
+    }
+
+    .frame-panel {
+        order: 8
+    }
+
+    .photo-panel {
+        padding: 8px 10px 12px
+    }
+
+    .photo-panel header {
+        flex-direction: column;
+        gap: 4px
+    }
+
+    .panel-note {
+        text-align: left
+    }
+
+    .pose-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 8px
+    }
+
+    .pose-sprite {
+        width: 42px;
+        height: 56px
+    }
+
+    .activity-overlay .pose-tile {
+        padding: 7px 2px 6px;
+        font-size: 12px
+    }
+
+    .backdrop-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr))
+    }
+
+    .frame-select {
+        flex-wrap: wrap
+    }
+
+    .photo-count {
+        font-size: 72px
+    }
+}
+
+@media(max-height:500px)and (min-width:701px) {
+    .photo-steps {
+        margin-bottom: 14px
+    }
+
+    .photo-view,
+    .shutter-row,
+    .photo-thumbnails {
+        width: min(100%, calc(76dvh * .8))
+    }
+
+    .photo-count {
+        font-size: 64px
+    }
+
+    .pose-grid {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr))
+    }
+
+    .pose-sprite {
+        width: 36px;
+        height: 48px
+    }
+}
