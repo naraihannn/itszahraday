@@ -10386,7 +10386,7 @@ function Mh(s, b, z) {
 
 function Ho(s = "id") {
     const b = Dh(s),
-        z = "Nara",
+        z = "Zahra",
         m = "Arka",
         E = D => Mh(D, z, m);
     return {
