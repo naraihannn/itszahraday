@@ -733,7 +733,7 @@ const Rn = {
     },
     keeper: {
         get name() {
-            return s("Pak Jati", "Mr. Jati")
+            return s("Pak Dul", "Mr. Dul")
         },
         get title() {
             return s("Penjaga taman", "Garden keeper")
@@ -4054,7 +4054,7 @@ function Yr(e, t = j.from) {
         chapter: s("06 · KEJUTAN MENUNGGU", "06 · A SURPRISE AWAITS")
     } : {
         title: s("Izin menyeberang", "Permission to cross"),
-        hint: s("Sampaikan keperluanmu kepada Pak Jati di jembatan.", "Tell Mr. Jati at the bridge why you are here."),
+        hint: s("Sampaikan keperluanmu kepada Pak Dul di jembatan.", "Tell Mr. Dul at the bridge why you are here."),
         target: "bridge",
         chapter: s("04 · PENJAGA JEMBATAN", "04 · THE BRIDGE KEEPER")
     } : {
@@ -4366,7 +4366,7 @@ function Jr() {
             [e.quest.noteRead, s("Baca surat sambutan", "Read the welcome letter")],
             [e.quest.doorChecked, s("Periksa pintu rumah", "Check the front door")],
             [e.quest.sageClue, s("Dengar petunjuk Kakek", "Hear the Old Sage's clue")],
-            [e.bridgeOpen, s("Dapatkan izin Pak Jati", "Get Mr. Jati's permission")],
+            [e.bridgeOpen, s("Dapatkan izin Pak Dul", "Get Mr. Dul's permission")],
             [e.quest.key !== "hidden", s("Temukan kunci", "Find the key")],
             [e.quest.houseUnlocked, s("Buka rumah", "Open the house")],
             [e.ended, s("Rayakan ulang tahun", "Celebrate the birthday")]
@@ -4404,7 +4404,7 @@ function Jr() {
             je(d), T.current?.effect("notify"), clearTimeout(Mt.current), Mt.current = window.setTimeout(() => je(""), 3500)
         },
         xe = d => {
-            t(y => Bt(y, d)), d.type === "memory" && (T.current?.effect("memory"), ye(s("Satu kenangan tersimpan.", "A memory has been kept."))), d.type === "bridge" && (T.current?.effect("bridge"), ye(s("Pak Jati menepi. Cari kunci di gerai seberang sungai.", "Mr. Jati steps aside. Look for the key at the stall across the river."))), d.type === "finish" && T.current?.effect("celebrate")
+            t(y => Bt(y, d)), d.type === "memory" && (T.current?.effect("memory"), ye(s("Satu kenangan tersimpan.", "A memory has been kept."))), d.type === "bridge" && (T.current?.effect("bridge"), ye(s("Pak Dul menepi. Cari kunci di gerai seberang sungai.", "Mr. Dul steps aside. Look for the key at the stall across the river."))), d.type === "finish" && T.current?.effect("celebrate")
         },
         R = () => {
             Ye.current++, S.current?.cancelAvatarChoice(), L(null), De({
@@ -4489,7 +4489,7 @@ function Jr() {
             }
             if (d === "album") {
                 if (!y.bridgeOpen || !y.quest.sageClue) {
-                    ye(s("Petunjuk Kakek dan izin Pak Jati akan membawamu ke gerai ini.", "The Old Sage's clue and Mr. Jati's permission will lead you to this stall."));
+                    ye(s("Petunjuk Kakek dan izin Pak Dul akan membawamu ke gerai ini.", "The Old Sage's clue and Mr. Dul's permission will lead you to this stall."));
                     return
                 }
                 y.quest.key === "hidden" ? L("inspection") : (F(0), L("album"));
@@ -5568,7 +5568,7 @@ function Jr() {
                             name: "heart",
                             size: 16
                         }), a.jsx("span", {
-                            children: s("Semua tadi hanya sebagian kecil dari alasanku bersyukur punya kamu.", "All of that was only a small part of why I am grateful to have you.")
+                            children: s("Semua tadi hanya sebagian kecil dari alasanku bersyukur bisa kenal kamu.", "All of that was only a small part of why I am grateful to have you.")
                         })]
                     }), a.jsx("div", {
                         className: "letter-body",
