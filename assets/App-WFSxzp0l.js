@@ -1526,9 +1526,7 @@ function Wn({
             className: "pq-title-block",
             children: [a.jsx("span", {
                 className: "pq-eyebrow pq-rise",
-                children: I("HADIAH UNTUK {name}", "A GIFT FOR {name}", {
-                    name: e.toUpperCase()
-                })
+                children: I("HADIAH UNTUK NOVRIDHA ZAHRA", "A GIFT FOR NOVRIDHA ZAHRA")
             }), a.jsxs("h1", {
                 id: "pq-title-heading",
                 className: "pq-wordmark pq-rise",
