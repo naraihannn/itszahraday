@@ -10279,7 +10279,7 @@ const Jg = "nara-arka",
             sender: "Aku"
         },
         intro: "Ada taman kecil yang kusiapkan khusus untuk hari ulang tahunmu. Jalan pelan-pelan, ya. Beberapa hal baik sedang menunggumu. Semoga kamu menikmatinya dan suka, yaa.",
-        welcome: "Aku menyiapkan sesuatu di dalam rumah yang berada di ujung jalan. Ikuti jalan dan rumah tersebut berada setelah tangga besar. Ada kejutan kecil yang menunggumu di sana.",
+        welcome: "Aku menyiapkan sesuatu di dalam rumah yang berada di ujung jalan. Ikuti jalan besar di depan dan rumah tersebut berada setelah tangga besar dan taman bunga. Ada kejutan kecil yang menunggumu di sana.",
         photos: [{
             src: Ra[0],
             title: "Dari satu halo",
@@ -10318,9 +10318,9 @@ const Jg = "nara-arka",
             title: "Untuk kita",
             text: "Semoga masih ada banyak pagi sederhana, perjalanan spontan, dan cerita konyol yang kita bagi. Aku tidak meminta hari yang selalu sempurna. Aku hanya ingin terus belajar menemanimu dengan lebih baik."
         }],
-        letterTitle: "Untukmu, selalu.",
-        letter: ["{recipient},", "Selamat ulang tahun. Hari ini aku ingin kamu berhenti sebentar dari semua hal yang sedang kamu kejar. Tarik napas, lihat sekeliling, dan izinkan dirimu dirayakan. Kamu pantas mendapatkan hari yang hangat, tanpa perlu melakukan apa-apa untuk layak menerimanya.", "Terima kasih sudah hadir dengan caramu sendiri. Untuk cerita panjang di akhir hari, untuk perhatian kecil yang sering kamu anggap biasa, dan untuk tawa yang bisa mengubah suasana paling melelahkan menjadi lebih ringan. Aku menyimpan semua itu, bahkan bagian-bagian yang mungkin sudah kamu lupakan.", "Aku tahu tahun ini tidak selalu mudah. Ada rencana yang berubah dan hari-hari yang meminta lebih banyak tenaga. Tapi aku melihat kamu terus mencoba. Aku berharap kamu bisa melihat dirimu dengan kelembutan yang sama seperti aku melihatmu.", "Di usia yang baru, semoga kamu semakin dekat dengan hal-hal yang membuatmu merasa hidup. Semoga ada ruang untuk istirahat, keberanian untuk memilih, dan banyak kesempatan untuk menjadi dirimu sendiri.", "Aku tidak bisa menjanjikan jalan yang selalu mudah. Tapi aku ingin tetap ada: mendengarkan, menemani, dan merayakan setiap langkah kecilmu. Taman ini mungkin kecil, tetapi rasa syukurku karena mengenalmu jauh lebih besar.", "Terima kasih sudah menjadi kamu. Hari ini, dan di hari-hari berikutnya, semoga kamu selalu merasa dicintai.", "Salam hangat, {sender}"],
-        greeting: ["Akhirnya sampai juga, {recipient}. Maaf membuatmu mencari sedikit lebih lama. Aku ingin hari ini punya cerita yang bisa kita kenang bersama.", "Semua yang kamu temukan tadi cuma sebagian kecil dari alasan aku bersyukur punya kamu."]
+        letterTitle: "Untukmu, Zahra",
+        letter: ["{recipient},", "Selamat ulang tahun. Hari ini aku ingin kamu berhenti sebentar dari semua hal yang sedang kamu kejar. Tarik napas, lihat sekeliling, dan izinkan dirimu dirayakan. Kamu pantas mendapatkan hari yang hangat, tanpa perlu melakukan apa-apa untuk layak menerimanya.", "Terima kasih sudah hadir dengan caramu sendiri. Untuk cerita panjang di akhir hari, untuk perhatian kecil yang sering kamu anggap biasa, dan untuk tawa yang bisa mengubah suasana paling melelahkan menjadi lebih ringan.", "Aku tahu tahun ini tidak selalu mudah. Ada rencana yang berubah dan hari-hari yang meminta lebih banyak tenaga. Tapi aku melihat kamu terus mencoba. Aku harap kamu nggak terlalu keras sama diri sendiri, ya. Pelan-pelan aja, kamu nggak harus memaksakan semuanya.", "Di usia yang baru, semoga kamu semakin dekat dengan hal-hal yang membuatmu merasa hidup. Semoga ada ruang untuk istirahat, keberanian untuk memilih, dan banyak kesempatan untuk menjadi dirimu sendiri.", "Aku tidak bisa menjanjikan jalan yang selalu mudah. Tapi aku ingin tetap ada: mendengarkan, menemani, dan merayakan setiap langkah kecilmu. Taman ini mungkin kecil, tetapi rasa syukurku karena mengenalmu jauh lebih besar.", "Terima kasih sudah menjadi kamu. Hari ini, dan di hari-hari berikutnya, semoga kamu selalu merasa dicintai.", "Salam hangat, {sender}"],
+        greeting: ["Akhirnya sampai juga, Zahra. Maaf membuatmu mencari sedikit lebih lama. Aku ingin hari ini punya cerita yang bisa dikenang. Semua yang kamu temukan tadi cuma sebagian kecil dari alasan aku bersyukur kenal kamu.", "Semua tadi hanya sebagian kecil dari alasanku bersyukur bisa kenal kamu."]
     },
     Fg = {
         names: {
@@ -10475,7 +10475,7 @@ const vl = {
         letterTitle: 40,
         letter: 1800,
         letterParagraphs: 10,
-        greetingLine: 180,
+        greetingLine: 240,
         photos: 8,
         photoTitle: 40,
         photoCaption: 340,
