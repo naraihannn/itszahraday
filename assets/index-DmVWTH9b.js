@@ -10272,7 +10272,7 @@ function Kg() {
 }
 var wg = Kg();
 const Jg = "nara-arka",
-    Ra = ["./assets/memory-0.webp", "./assets/memory-1.webp", "./assets/memory-2.webp", "./assets/memory-3.webp"],
+    Ra = ["./birthday/photos/photo1.png", "./birthday/photos/photo2.png", "./birthday/photos/photo3.png", "./birthday/photos/photo4.png", "./birthday/photos/photo5.png", "./birthday/photos/photo6.png", "./birthday/photos/photo7.png"],
     kg = {
         names: {
             recipient: "Zahra",
@@ -10280,23 +10280,11 @@ const Jg = "nara-arka",
         },
         intro: "Ada taman kecil yang kusiapkan khusus untuk hari ulang tahunmu. Jalan pelan-pelan, ya. Beberapa hal baik sedang menunggumu. Semoga kamu menikmatinya dan suka, yaa.",
         welcome: "Aku menyiapkan sesuatu di dalam rumah yang berada di ujung jalan. Ikuti jalan besar di depan dan rumah tersebut berada setelah tangga besar dan taman bunga. Ada kejutan kecil yang menunggumu di sana.",
-        photos: [{
-            src: Ra[0],
-            title: "Dari satu halo",
-            caption: "Hujan sore itu membuat kita tinggal sedikit lebih lama di kedai buku. Aku memesan kopi, kamu membuka buku yang sama untuk ketiga kalinya. Lalu kita mulai bicara. Tentang cerita yang belum selesai, tentang lagu yang selalu diputar ulang. Aku belum tahu saat itu: obrolan sederhana ini akan menjadi sesuatu yang paling kutunggu."
-        }, {
-            src: Ra[1],
-            title: "Hari yang tidak terburu-buru",
-            caption: "Bekalnya terlalu banyak, tikarnya terlalu kecil, dan kita lupa membawa sendok. Tapi sore di taman itu tetap jadi salah satu hari favoritku. Rupanya bahagia tidak selalu perlu rencana besar. Kadang cukup ada kamu, buah yang manis, dan waktu yang terasa melambat."
-        }, {
-            src: Ra[2],
-            title: "Ke mana pun, asal bersamamu",
-            caption: "Kita duduk dekat jendela dan menebak nama setiap gunung yang lewat. Tidak satu pun tebakan kita benar. Kamu tertawa sampai lupa memotret pemandangannya. Foto ini mengingatkanku bahwa perjalanan terbaik selalu punya teman yang tepat."
-        }, {
-            src: Ra[3],
-            title: "Sampai langit berubah warna",
-            caption: "Kita menunggu matahari turun tanpa banyak bicara. Suara ombak mengisi semua jeda. Aku ingin menyimpan sore ini, bukan karena semuanya sempurna, tapi karena di sebelahmu, diam pun terasa seperti pulang."
-        }],
+        photos: Ra.map((src, index) => ({
+            src,
+            title: ["Satu momen kecil", "Cerita yang tersimpan", "Hari yang berkesan", "Senyum yang tertangkap", "Potongan cerita kita", "Hal sederhana yang berarti", "Untuk dikenang lagi"][index],
+            caption: ["Ada momen yang terasa sederhana saat dijalani, tetapi menyenangkan untuk diingat kembali.", "Satu foto, satu potongan cerita yang ingin kusimpan baik-baik.", "Tidak harus selalu ada alasan besar untuk membuat sebuah hari terasa berkesan.", "Semoga foto ini bisa mengingatkanmu pada hal-hal baik yang pernah hadir.", "Beberapa cerita memang lebih nyaman disimpan lewat momen kecil seperti ini.", "Hal sederhana kadang justru menjadi bagian yang paling mudah dirindukan.", "Satu lagi kenangan kecil yang semoga bisa membuatmu tersenyum."][index]
+        })),
         adventure: {
             sage: ["Ah, rupanya tamu yang ditunggu sudah datang. Selamat ulang tahun, {recipient}. Rumah itu memang belum bisa dibuka begitu saja.", "Kuncinya terselip di gerai buah seberang sungai. Cari di antara buah merah, dekat kain biru. Perhatikan baik-baik—benda kecil sering bersembunyi di tempat yang ramai.", "Sampaikan kepada penjaga jembatan bahwa kamu sedang mencari kunci rumah. Aku menunggu kabar baikmu di sini."],
             questions: [{
@@ -10329,23 +10317,11 @@ const Jg = "nara-arka",
         },
         intro: "I made a little garden just for your birthday. Take your time walking through it. A few good things are waiting for you.",
         welcome: "I prepared something in the house at the end of the path. Follow the flower path after the big stairs. A surprise is waiting for you there.",
-        photos: [{
-            src: Ra[0],
-            title: "It started with hello",
-            caption: "That rainy afternoon kept us a little longer at the bookshop. I ordered coffee, and you opened the same book for the third time. Then we started talking, about unfinished stories and songs we kept replaying. I didn't know it yet, but that simple conversation would become the thing I look forward to most."
-        }, {
-            src: Ra[1],
-            title: "A day with no rush",
-            caption: "Too much food, too small a blanket, and we forgot the spoons. Still, that afternoon in the park is one of my favorite days. Happiness doesn't always need big plans. Sometimes it is just you, sweet fruit, and time that seems to slow down."
-        }, {
-            src: Ra[2],
-            title: "Anywhere, as long as it's with you",
-            caption: "We sat by the window and guessed the name of every mountain we passed. We didn't get a single one right. You laughed so hard you forgot to take a picture of the view. This photo reminds me that the best journeys always have the right company."
-        }, {
-            src: Ra[3],
-            title: "Until the sky changed color",
-            caption: "We waited for the sun to go down without saying much. The waves filled every pause. I want to keep this evening, not because everything was perfect, but because next to you, even silence feels like coming home."
-        }],
+        photos: Ra.map((src, index) => ({
+            src,
+            title: ["A little moment", "A story to keep", "A day to remember", "A captured smile", "A piece of our story", "Simple things that matter", "One more memory"][index],
+            caption: ["Some moments feel simple while they happen, but become lovely to look back on.", "One photo, one little part of a story worth keeping.", "A day does not need a big reason to become meaningful.", "May this photo remind you of the good things that have found their way to you.", "Some stories are best kept through little moments like this.", "Sometimes the simplest things are the ones we miss the most.", "One more small memory that I hope brings a smile."][index]
+        })),
         adventure: {
             sage: ["Ah, the guest we have been waiting for has arrived. Happy birthday, {recipient}. That house cannot simply be opened just yet.", "The key is tucked away at the fruit stall across the river. Look among the red fruit, near the blue cloth. Look closely: small things love to hide in busy places.", "Tell the bridge keeper that you are looking for the house key. I will wait here for your good news."],
             questions: [{
@@ -10410,7 +10386,7 @@ function Ho(s = "id") {
         letterTitle: E(b.letterTitle),
         letter: b.letter.map(E),
         greeting: [E(b.greeting[0]), E(b.greeting[1])],
-        songs: [],
+        songs: [{ src: "./birthday/music/music1.mp3" }],
         gombalan: [],
         watermark: !0
     }
