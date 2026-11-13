@@ -10275,7 +10275,7 @@ const Jg = "nara-arka",
     Ra = ["./assets/memory-0.webp", "./assets/memory-1.webp", "./assets/memory-2.webp", "./assets/memory-3.webp"],
     kg = {
         names: {
-            recipient: "Sayang",
+            recipient: "Zahra",
             sender: "Aku"
         },
         intro: "Ada taman kecil yang kusiapkan khusus untuk hari ulang tahunmu. Jalan pelan-pelan, ya. Beberapa hal baik sedang menunggumu.",
