@@ -1271,9 +1271,7 @@ function Dn({
             className: "pq-load-stack",
             children: [a.jsx("span", {
                 className: "pq-load-for",
-                children: I("Untuk {name}", "For {name}", {
-                    name: r
-                })
+                children: I("Untuk Novridha Zahra", "For Novridha Zahra")
             }), a.jsx("h1", {
                 className: "pq-load-title",
                 children: s("Taman kecil sedang disiapkan", "A little garden is being prepared")
