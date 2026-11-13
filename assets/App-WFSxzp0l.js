@@ -5674,7 +5674,7 @@ function Jr() {
                     children: [s("Semoga dunia selalu punya cara baik", "May the world always find kind ways"), a.jsx("br", {}), s("untuk memelukmu. Seperti aku.", "to hold you. Like I do.")]
                 }), a.jsxs("div", {
                     className: "ending-sign",
-                    children: [s("Dengan sayang,", "With love,"), " ", a.jsx("strong", {
+                    children: [s("Salam hangat,", "Best wishes,"), " ", a.jsx("strong", {
                         children: j.from
                     }), a.jsx(N, {
                         name: "heart",
