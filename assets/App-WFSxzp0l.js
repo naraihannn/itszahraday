@@ -1611,12 +1611,7 @@ function Wn({
             })]
         }), a.jsxs("span", {
             className: "pq-credit pq-rise",
-            children: [a.jsx(N, {
-                name: "heart",
-                size: 16
-            }), I("Dari {from}", "From {from}", {
-                from: t
-            })]
+            children: ["Made by Raihan"]
         })]
     })
 }
