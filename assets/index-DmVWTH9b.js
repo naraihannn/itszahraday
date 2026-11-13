@@ -10278,7 +10278,7 @@ const Jg = "nara-arka",
             recipient: "Zahra",
             sender: "Aku"
         },
-        intro: "Ada taman kecil yang kusiapkan khusus untuk hari ulang tahunmu. Jalan pelan-pelan, ya. Beberapa hal baik sedang menunggumu.",
+        intro: "Ada taman kecil yang kusiapkan khusus untuk hari ulang tahunmu. Jalan pelan-pelan, ya. Beberapa hal baik sedang menunggumu. Semoga kamu menikmatinya dan suka, yaa.",
         welcome: "Aku menyiapkan sesuatu di rumah di ujung jalan. Ikuti jalan bunga setelah tangga besar. Ada kejutan yang menunggumu di sana.",
         photos: [{
             src: Ra[0],
