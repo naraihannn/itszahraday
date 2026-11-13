@@ -1611,7 +1611,7 @@ function Wn({
             })]
         }), a.jsxs("span", {
             className: "pq-credit pq-rise",
-            children: ["Made by Raihan"]
+            children: ["Made by Raihan ✨"]
         })]
     })
 }
