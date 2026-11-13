@@ -3613,7 +3613,7 @@ const vr = [{
     }])],
     Nr = [{
         id: "sender",
-        label: "Bicara dengan Cibong",
+        label: "Bicara dengan Raihan",
         point: {
             x: .72,
             z: 1.6
