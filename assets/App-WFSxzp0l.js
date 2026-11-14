@@ -146,7 +146,7 @@ const bn = [
     _t = () => Ce(j.senderAvatar) ? j.senderAvatar : null,
     Oa = () => Ce(j.recipientAvatar) ? j.recipientAvatar : null,
     La = () => ({
-        recipient: Oa() ?? "g01",
+        recipient: Oa() ?? "g02",
         sender: _t() ?? "b01",
         confirmed: !1
     });
@@ -155,7 +155,7 @@ function Wt(e) {
     const t = La();
     if (!e || typeof e != "object") return t;
     const n = e;
-    return t.confirmed = n.confirmed === !0 && Ce(n.recipient) && Ce(n.sender), Ce(n.recipient) && (t.confirmed || !Oa()) && (t.recipient = n.recipient), Ce(n.sender) && (t.sender = n.sender), t.sender = _t() ?? t.sender, t
+    return t.confirmed = n.confirmed === !0 && Ce(n.recipient) && Ce(n.sender), Ce(n.recipient) && t.confirmed && (t.recipient = n.recipient), Ce(n.sender) && (t.sender = n.sender), t.sender = _t() ?? t.sender, t
 }
 
 function jn(e, t) {
@@ -1651,7 +1651,7 @@ const Ve = new Map,
         name: e
     }),
     ds = () => j.watermark ? "ZAHRA BIRTHDAY’S GAME" : "PIXEL PLAY",
-    hs = () => j.watermark ? "HEYTML / LITTLE MOMENTS" : "LITTLE MOMENTS",
+    hs = () => "LITTLE MOMENTS",
     ks = e => `${j.watermark ? "HeyTML" : s("Kenangan", "Memory")}-${j.name}-${e}.png`,
     Jn = () => j.watermark ? s("SEBUAH TAMAN KECIL DARI HEYTML", "A LITTLE GARDEN FROM HEYTML") : I("SEBUAH TAMAN KECIL DARI {name}", "A LITTLE GARDEN FROM {name}", {
         name: j.from.toUpperCase()
@@ -5244,7 +5244,7 @@ function Jr() {
                         }), a.jsx("h2", {
                             children: se.title
                         }), a.jsx("p", {
-                            children: se.hint
+                            children: e.quest.doorChecked && !e.quest.sageClue ? "" : se.hint
                         }), e.quest.doorChecked && !e.quest.sageClue && a.jsx("p", {
                             children: s("Seseorang di dekat rumah mungkin tahu jawabannya. Temui Kakek Misterius berbaju hijau di sebelah kiri rumah.", "Someone near the house may know the answer. Find the Old Sage in green to the left of the house.")
                         }), e.quest.sageClue && a.jsx("p", {
@@ -5662,7 +5662,7 @@ function Jr() {
                         children: [j.name, "."]
                     })]
                 }), a.jsxs("p", {
-                    children: [s("Semoga dunia selalu punya cara baik", "May the world always find kind ways"), a.jsx("br", {}), s("untuk memelukmu. Seperti aku.", "to hold you. Like I do.")]
+                    children: [s("Semoga dunia selalu baik sama kamu.", "May the world always be kind to you."), a.jsx("br", {}), s("And if someday it isn't, I hope you still find little reasons to smile.", "And if someday it isn't, I hope you still find little reasons to smile.")]
                 }), a.jsxs("div", {
                     className: "ending-sign",
                     children: [s("Salam hangat,", "Best wishes,"), " ", a.jsx("strong", {
