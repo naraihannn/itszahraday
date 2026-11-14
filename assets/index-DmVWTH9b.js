@@ -10306,13 +10306,13 @@ const Jg = "nara-arka",
         },
         wishes: [{
             title: "Untuk hatimu",
-            text: "Semoga kamu selalu punya alasan kecil untuk tersenyum. Semoga hari yang berat bertemu pelukan yang hangat, dan semoga kamu ingat: kamu tidak harus menghadapi semuanya sendirian."
+            text: "Semoga kamu selalu punya alasan kecil untuk tersenyum, bahkan di tengah hari-hari yang melelahkan. Jangan terlalu keras pada dirimu sendiri, ya. Kamu juga berhak beristirahat, merasa bahagia, dan menikmati hal-hal kecil tanpa harus memikirkan semuanya sekaligus. Ingat: kamu tidak harus menghadapi semuanya sendirian ya, Zahra."
         }, {
             title: "Untuk mimpimu",
-            text: "Semoga langkahmu menuju hal yang kamu impikan selalu menemukan jalan. Tidak apa-apa berjalan pelan, beristirahat, atau memulai lagi. Aku bangga pada keberanianmu untuk terus mencoba."
+            text: "Semoga langkahmu menuju hal yang kamu impikan selalu menemukan jalan. Kalau suatu saat terasa sulit, nggak apa-apa untuk berhenti sebentar dan mengambil napas. Tidak semua hal harus selesai hari ini. Keep going at your own pace, and never underestimate how far you've come. Aku bangga pada keberanianmu untuk terus mencoba."
         }, {
-            title: "Untuk kita",
-            text: "Semoga masih ada banyak pagi sederhana, perjalanan spontan, dan cerita konyol yang kita bagi. Aku tidak meminta hari yang selalu sempurna. Aku hanya ingin terus belajar menemanimu dengan lebih baik."
+            title: "Untuk hari-harimu",
+            text: "Semoga hari-harimu dipenuhi kejutan kecil yang menyenangkan, pertemuan yang membawa kebaikan, dan cerita-cerita baru yang layak dikenang. Semoga kamu selalu menemukan sesuatu untuk disyukuri, bahkan dari hal-hal sederhana. Siapa sangka dari sebuah pertemuan sederhana bisa muncul begitu banyak cerita random untuk dikenang? Semoga masih ada kesempatan untuk berbagi lebih banyak tawa, obrolan, lagu, dan kejadian tidak terduga lainnya. Let's see where this little story takes us."
         }],
         letterTitle: "Untukmu, Zahra",
         letter: ["{recipient},", "Selamat ulang tahun. Hari ini aku ingin kamu berhenti sebentar dari semua hal yang sedang kamu kejar. Tarik napas, lihat sekeliling, dan izinkan dirimu dirayakan. Kamu pantas mendapatkan hari yang hangat, tanpa perlu melakukan apa-apa untuk layak menerimanya.", "Terima kasih sudah hadir dengan caramu sendiri. Untuk cerita panjang di akhir hari, untuk perhatian kecil yang sering kamu anggap biasa, dan untuk tawa yang bisa mengubah suasana paling melelahkan menjadi lebih ringan.", "Aku tahu tahun ini tidak selalu mudah. Ada rencana yang berubah dan hari-hari yang meminta lebih banyak tenaga. Tapi aku melihat kamu terus mencoba. Aku harap kamu nggak terlalu keras sama diri sendiri, ya. Pelan-pelan aja, kamu nggak harus memaksakan semuanya.", "Di usia yang baru, semoga kamu semakin dekat dengan hal-hal yang membuatmu merasa hidup. Semoga ada ruang untuk istirahat, keberanian untuk memilih, dan banyak kesempatan untuk menjadi dirimu sendiri.", "Aku tidak bisa menjanjikan jalan yang selalu mudah. Tapi aku ingin tetap ada: mendengarkan, menemani, dan merayakan setiap langkah kecilmu. Taman ini mungkin kecil, tetapi rasa syukurku karena mengenalmu jauh lebih besar.", "Terima kasih sudah menjadi kamu. Hari ini, dan di hari-hari berikutnya, semoga kamu selalu merasa dicintai.", "Salam hangat, {sender}"],
