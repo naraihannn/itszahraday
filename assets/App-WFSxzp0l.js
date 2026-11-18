@@ -1652,7 +1652,7 @@ const Ve = new Map,
     }),
     ds = () => j.watermark ? "ZAHRA BIRTHDAY’S GAME" : "PIXEL PLAY",
     hs = () => "LITTLE MOMENTS",
-    ks = e => `${j.watermark ? "HeyTML" : s("Kenangan", "Memory")}-${j.name}-${e}.png`,
+    ks = e => `${j.watermark ? "Birthday" : s("Kenangan", "Memory")}-${j.name}-${e.charAt(0).toUpperCase() + e.slice(1)}.png`,
     Jn = () => j.watermark ? s("SEBUAH TAMAN KECIL DARI HEYTML", "A LITTLE GARDEN FROM HEYTML") : I("SEBUAH TAMAN KECIL DARI {name}", "A LITTLE GARDEN FROM {name}", {
         name: j.from.toUpperCase()
     }),
@@ -3816,11 +3816,11 @@ const Tr = "heytml:3d-journey:v3:" + Te,
         checkpoint: "entrance"
     }),
     Rr = () => ({
-        music: .3,
-        sfx: .4,
+        music: .75,
+        sfx: .75,
         muted: !1,
         reduced: !1,
-        quality: "balanced",
+        quality: "high",
         timeOfDay: "day"
     }),
     dt = {
@@ -4064,7 +4064,7 @@ function Yr(e, t = j.from) {
         chapter: s("03 · SEBUAH PETUNJUK", "03 · A CLUE")
     } : {
         title: s("Rumah di ujung jalan", "The house at the end of the path"),
-        hint: s("Naiki tangga besar, lalu ikuti jalan bunga ke pintu rumah.", "Climb the big stairs, then follow the flower path to the front door."),
+        hint: s("Naikilah tangga besar, kemudian ikuti jalan setapak yang dihiasi bunga hingga sampai di depan pintu rumah.", "Climb the big stairs, then follow the flower-lined path until you reach the front door."),
         target: "finale",
         chapter: s("02 · PINTU RAHASIA", "02 · THE SECRET DOOR")
     } : {
@@ -5245,9 +5245,9 @@ function Jr() {
                             children: se.title
                         }), a.jsx("p", {
                             children: e.quest.doorChecked && !e.quest.sageClue ? "" : se.hint
-                        }), e.quest.doorChecked && !e.quest.sageClue && a.jsx("p", {
-                            children: s("Seseorang di dekat rumah mungkin tahu jawabannya. Temui Kakek Misterius berbaju hijau di sebelah kiri rumah.", "Someone near the house may know the answer. Find the Old Sage in green to the left of the house.")
-                        }), e.quest.sageClue && a.jsx("p", {
+                        }), e.quest.doorChecked && !e.quest.sageClue && !e.ended && a.jsx("p", {
+                            children: s("Sepertinya seseorang di sekitar rumah mengetahui jawabannya. Coba temui Kakek Misterius berbaju hijau yang berada di sebelah kiri rumah. Mungkin ia bisa memberimu petunjuk berikutnya.", "Someone around the house seems to know the answer. Try meeting the Old Sage in green to the left of the house. Perhaps he can give you the next clue.")
+                        }), e.quest.sageClue && !e.ended && a.jsx("p", {
                             className: "clue-note",
                             children: j.adventure.hint
                         }), a.jsx("span", {
@@ -5393,12 +5393,12 @@ function Jr() {
                         className: "book-page",
                         children: [a.jsx("span", {
                             className: "eyebrow",
-                            children: s("CATATAN PENJAGA TAMAN · HALAMAN 17", "THE GARDENER'S NOTES · PAGE 17")
+                            children: s("SULUNG — KUNTO AJI · TAHUN 2018", "SULUNG — KUNTO AJI · 2018")
                         }), a.jsx("h2", {
-                            children: s("Hal-hal yang tumbuh pelan.", "Things that grow slowly.")
+                            children: s("Tidak harus selalu sempurna.", "It does not always have to be perfect.")
                         }), a.jsx("p", {
                             className: "drop-cap",
-                            children: s("Daun baru tidak terburu-buru membuka diri. Ia menunggu pagi, setitik air, dan cahaya yang cukup.", "A new leaf is in no hurry to open. It waits for the morning, a drop of water and just enough light.")
+                            children: s("Setiap orang punya perjalanan yang berbeda. Tidak ada garis waktu yang harus selalu sama.", "Everyone has a different journey. There is no single timeline that everyone has to follow.")
                         }), a.jsx("span", {
                             className: "page-no",
                             children: "17"
@@ -5406,10 +5406,10 @@ function Jr() {
                     }), a.jsxs("section", {
                         className: "book-page",
                         children: [a.jsx("p", {
-                            children: s("Barangkali kita juga boleh begitu. Berhenti sebentar bukan berarti menyerah. Ada perjalanan yang justru terasa lebih jauh setelah secangkir teh hangat.", "Maybe we are allowed to be like that too. Pausing for a while is not giving up. Some journeys go even further after a warm cup of tea.")
+                            children: s("Tak perlu membandingkan perjalananmu dengan siapa pun. Hargai setiap proses kecil yang telah membawamu sampai sejauh ini. Pelan-pelan saja, sebab bertumbuh juga berarti belajar memahami diri sendiri.", "There is no need to compare your journey with anyone else. Appreciate every small step that has brought you this far. Take your time, because growing also means learning to understand yourself.")
                         }), a.jsx("p", {
                             className: "handwriting",
-                            children: s("“Ada kehangatan yang menunggu di ujung jalan.”", "“There is warmth waiting at the end of the road.”")
+                            children: s("“Semoga kamu selalu punya alasan untuk menyayangi dirimu sendiri.”", "“May you always have a reason to love yourself.”")
                         }), a.jsxs("button", {
                             className: "primary",
                             "data-cancel": !0,
@@ -5435,9 +5435,9 @@ function Jr() {
                     className: "eyebrow",
                     children: s("DUA CANGKIR, SATU JEDA", "TWO CUPS, ONE PAUSE")
                 }), a.jsx("h2", {
-                    children: s("Hangatnya sampai ke hati.", "Warm all the way to the heart.")
+                    children: s("Sesekali, hati juga perlu disapa.", "Sometimes, the heart needs a little attention too.")
                 }), a.jsx("p", {
-                    children: s("Teh melati sudah disiapkan. Dari sini, taman terlihat begitu tenang. Duduklah dalam ceritamu sendiri sebentar.", "Jasmine tea is ready. From here, the garden looks so calm. Sit with your own story for a while.")
+                    children: s("Teh Melati telah disiapkan. Dari sini, taman terlihat begitu tenang. Duduklah sejenak, nikmati hari ini, dan berikan dirimu waktu untuk sekadar bernapas.", "Jasmine tea is ready. From here, the garden looks so peaceful. Sit for a moment, enjoy today, and give yourself time to simply breathe.")
                 }), a.jsxs("button", {
                     className: "primary",
                     onClick: () => {
@@ -5568,7 +5568,7 @@ function Jr() {
                             name: "heart",
                             size: 16
                         }), a.jsx("span", {
-                            children: s("Semua tadi hanya sebagian kecil dari alasanku bersyukur bisa kenal kamu.", "All of that was only a small part of why I am grateful to have you.")
+                            children: s("Semua tadi hanyalah sebagian kecil dari alasanku untuk ikut merayakan hari istimewamu.", "All of that was only a small part of why I wanted to celebrate your special day.")
                         })]
                     }), a.jsx("div", {
                         className: "letter-body",
