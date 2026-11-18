@@ -10279,7 +10279,7 @@ const Jg = "nara-arka",
             sender: "Aku"
         },
         intro: "Ada taman kecil yang kusiapkan khusus untuk hari ulang tahunmu. Jalan pelan-pelan, ya. Beberapa hal baik sedang menunggumu. Semoga kamu menikmatinya dan suka, yaa.",
-        welcome: "Aku menyiapkan sesuatu di dalam rumah yang berada di ujung jalan. Ikuti jalan besar di depan dan rumah tersebut berada setelah tangga besar dan taman bunga. Ada kejutan kecil yang menunggumu di sana.",
+        welcome: "Aku sudah menyiapkan sesuatu di sebuah rumah yang terletak di ujung jalan. Ikuti jalan utama di depanmu, lalu teruskan perjalanan melewati tangga besar dan taman bunga. Ada kejutan kecil yang sudah menantimu di dalamnya.",
         photos: Ra.map((src, index) => ({
             src,
             title: ["Tersangka yang Sedang Berulang Tahun", "TKP Pertama: Neighbors", "Spotify: Tempat Mengintip Selera Musik", "Anggota Keluarga Bernama Dudul", "Dapur Produksi Zahra", "Kasus Foto Profil Discord", "Arsip Kenangan: Selesai, Tapi Tidak Dilupakan"][index],
@@ -10294,7 +10294,7 @@ const Jg = "nara-arka",
             ][index]
         })),
         adventure: {
-            sage: ["Ah, rupanya tamu yang ditunggu sudah datang. Selamat ulang tahun, {recipient}. Rumah itu memang belum bisa dibuka begitu saja.", "Kuncinya terselip di gerai buah seberang sungai. Cari di antara buah merah, dekat kain biru. Perhatikan baik-baik—benda kecil sering bersembunyi di tempat yang ramai.", "Sampaikan kepada penjaga jembatan bahwa kamu sedang mencari kunci rumah. Aku menunggu kabar baikmu di sini."],
+            sage: ["Ah, akhirnya tamu yang ditunggu datang juga. Selamat ulang tahun, {recipient}! Sayangnya, rumah itu belum bisa dibuka begitu saja. Ada sesuatu yang harus kamu lakukan terlebih dahulu.", "Kunci rumah itu tersembunyi di sebuah gerai buah di seberang sungai. Coba cari di antara tumpukan buah berwarna merah, tepat di dekat kain biru. Perhatikan baik-baik dan jangan terburu-buru, sebab harta kecil sering bersembunyi di tempat yang tak terduga.", "Coba temui penjaga jembatan dan beri tahu bahwa kamu sedang mencari kunci rumah. Aku akan menunggumu di sini sampai kamu membawa kabar baik."],
             questions: [{
                 text: "Sebentar, ada keperluan apa di seberang?",
                 answers: ["Aku mencari kunci rumah di gerai buah.", "Aku sedang mencari jalan keluar taman."]
