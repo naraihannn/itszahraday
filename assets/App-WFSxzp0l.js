@@ -4048,7 +4048,7 @@ function Yr(e, t = j.from) {
         chapter: s("SELAMAT ULANG TAHUN", "HAPPY BIRTHDAY")
     } : {
         title: s("Selamat ulang tahun", "Happy birthday"),
-        hint: I("{sender} menunggumu di ruang keluarga.", "{sender} is waiting for you in the living room.", {
+        hint: I("{sender} menunggumu di ruang keluarga. Sebelum bertemu {sender}, kamu bisa menikmati segelas cangkir terlebih dahulu.", "{sender} is waiting for you in the living room. Before meeting {sender}, you can enjoy a cup first.", {
             sender: t
         }),
         target: "finale",
@@ -5253,7 +5253,7 @@ function Jr() {
                             children: e.quest.doorChecked && !e.quest.sageClue ? "" : se.hint
                         }), e.quest.doorChecked && !e.quest.sageClue && !e.ended && a.jsx("p", {
                             children: s("Sepertinya seseorang di sekitar rumah mengetahui jawabannya. Coba temui Kakek Misterius berbaju hijau yang berada di sebelah kiri rumah. Mungkin ia bisa memberimu petunjuk berikutnya.", "Someone around the house seems to know the answer. Try meeting the Old Sage in green to the left of the house. Perhaps he can give you the next clue.")
-                        }), e.quest.sageClue && !e.ended && a.jsx("p", {
+                        }), e.quest.sageClue && e.quest.key === "hidden" && !e.ended && a.jsx("p", {
                             className: "clue-note",
                             children: j.adventure.hint
                         }), a.jsx("span", {
