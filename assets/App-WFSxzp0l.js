@@ -4030,6 +4030,12 @@ function Ir(e, t = !1) {
 
 function Yr(e, t = j.from) {
     const n = e.quest;
+    if (e.ended) return {
+        title: s("Taman ini milikmu", "This garden is yours"),
+        hint: s("Baca surat lagi, berfoto, atau jelajahi taman bersama.", "Read the letter again, take photos, or explore the garden together."),
+        target: "finale",
+        chapter: s("SELAMAT ULANG TAHUN", "HAPPY BIRTHDAY")
+    };
     return n.noteRead ? n.doorChecked ? n.sageClue ? e.bridgeOpen ? n.key === "hidden" ? {
         title: s("Kunci yang terselip", "The hidden key"),
         hint: s("Periksa buah merah dekat kain biru di gerai seberang.", "Check the red fruit near the blue cloth at the stall across the river."),
